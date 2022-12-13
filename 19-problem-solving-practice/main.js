@@ -34,3 +34,9 @@ function isDivisible (num1, num2) {
 }
 isDivisible (15, 4)
 // console.log(9 % 3)
+var num = 6
+if (num === "6") {
+    console.log("yay")
+}else {
+    console.log("oh no")
+}
