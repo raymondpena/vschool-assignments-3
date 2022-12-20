@@ -7,9 +7,8 @@ const multiplyBox = document.getElementById("multiply")
 addBox.addEventListener("submit", (event) => {
     event.preventDefault()
     function sum(numOne, numTwo){
-        return numOne + numTwo
+        return Number(numOne) + Number(numTwo)
     }
-    console.log(sum(addBox.addOne.value, addBox.addTwo.value))
     const h1 = document.createElement("h1")
     h1.textContent = sum(addBox.addOne.value, addBox.addTwo.value)
     document.body.append(h1)
@@ -21,7 +20,9 @@ subtractBox.addEventListener("submit", (event) => {
     function subtract(x, y){
         return x - y
     }
-    console.log(subtract(subtractBox.subtractOne.value, subtractBox.subtractTwo.value))
+    const h1 = document.createElement("h1")
+    h1.textContent = subtract(subtractBox.subtractOne.value, subtractBox.subtractTwo.value)
+    document.body.append(h1)
 })
 
 // multiplication box
@@ -30,7 +31,7 @@ multiplyBox.addEventListener("submit", (event) => {
     function multiply(v, m){
         return v * m
     }
-    console.log(multiply(multiplyBox.multiplyOne.value, multiplyBox.multiplyTwo.value))
+    const h1 = document.createElement("h1")
+    h1.textContent = multiply(multiplyBox.multiplyOne.value, multiplyBox.multiplyTwo.value)
+    document.body.append(h1)
 })
-
-
