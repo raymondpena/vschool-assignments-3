@@ -1,5 +1,5 @@
 const readline = require("readline-sync");
-const name = readline.question("Hello! My name is 'Ray' what's your name!? - ")
+const name = readline.question("Enter Name - ")
 console.log("")
 console.log(`Welcome ${name}! I'd like to welcome you to my console version of "Elden Ring"!`)
 console.log("")
@@ -34,83 +34,83 @@ console.log(`"a" will be your attack move against the bosses. You will start wit
 console.log(`"r" will also only be avalible once a boss has spawned. You will have a 50% chance of escaping.`)
 console.log("")
 console.log(`How to beat the game? Kill all of the bosses, or reach "Roundtable Hold" which is 100 Miles away...`)
-console.log("Every 10 miles, you'll recieve a random stat boost.")
-console.log(`Every Boss kill, will reward a stat boost equivalent to their difficulty.`)
+console.log("Every 10 miles, you'll recieve a random stat boost of 1-3 x Player Stats.")
+console.log(`Every Boss kill, will reward 1 of 3 stat boost. Double HP, Double DAMAGE, or Both.`)
 console.log(`Good Luck!`)
 console.log("")
 console.log(`Boss list:`)
 const bosslist = [
-    bossOne = {
+    {
     Name: "Margit the Fell Omen",
     Hp: 100,
     Damage: 10
     },
-    bossTwo = {
+    {
     Name: "Godrick the Grafted",
     Hp: 200,
     Damage: 20
     },
-    bossThree = {
+    {
     Name: "Red Wolf of Radagon",
     Hp: 300,
     Damage: 30
     },
-    bossFour = {
+    {
     Name: "Rennala, Queenof the Full Moon",
     Hp: 400,
     Damage: 40
     },
-    bossFive = {
+    {
     Name: "Rennala, Queenof the Full Moon",
     Hp: 500,
     Damage: 50
     },
-    bossSix = {
+    {
     Name: "God-devouring Serpent / Rykardn",
     Hp: 600,
     Damage: 60
     },
-    bossSeven = {
+    {
     Name: "Starscourge Radahn",
     Hp: 700,
     Damage: 70
     },
-    bossEight = {
+    {
     Name: "Magma Wyrm Makar",
     Hp: 800,
     Damage: 80
     },
-    bossNine = {
+    {
     Name: "Godfrey, First Elden Lord",
     Hp: 900,
     Damage: 90
     },
-    bossTen = {
+    {
     Name: "Morgot, the Omen King",
     Hp: 1000,
     Damage: 100
     },
-    bossEleven = {
+    {
     Name: "Fire Giant",
     Hp: 1100,
     Damage: 110
     },
-    bossTwelve = {
+    {
     Name: "Godskin Duo",
     Hp: 1200,
     Damage: 120
     },
-    bossThirteen = {
+    {
     Name: "Maliketh, the Black Blade",
     Hp: 1300,
     Damage: 130
     },
-    bossFourteen = {
+    {
     Name: "Hoarah Loux",
     Hp: 1400,
     Damage: 140
     },
-    bossFifteen = {
+    {
     Name: "Radagon / Elden Beast",
     Hp: 1500,
     Damage: 150
@@ -150,9 +150,9 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
         if (numGenOne === 3) {
             let numGenTwo = Math.random() * 100
             console.log("")
-            console.log("!!!A Boss has appeared!!!")
-            if (numGenTwo <= 50) {
+            if (numGenTwo <= 50 && bosslist.length > 0) {
                 while (newPlayer.aggro > 0 && newPlayer.Hp > 0) {
+                console.log("!!!A Boss has appeared!!!")
                 console.log("")    
                 console.log(`${bosslist[0].Name} is in your sight! What will it be?`)
                 console.log("")
@@ -213,8 +213,9 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
                     newPlayer.aggro -= 1
                 }
                 }}
-            else if (numGenTwo <= 76.56) {
+            else if (numGenTwo <= 76.56 && bosslist.length > 1) {
                 while (newPlayer.aggro > 0 && newPlayer.Hp > 0) {
+                    console.log("!!!A Boss has appeared!!!")
                     console.log("")    
                     console.log(`${bosslist[1].Name} is in your sight! What will it be?`)
                     console.log("")
@@ -275,8 +276,9 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
                         newPlayer.aggro -= 1
                     }
                 }}
-            else if (numGenTwo <= 89.065) {
+            else if (numGenTwo <= 89.065 && bosslist.length > 2) {
                 while (newPlayer.aggro > 0 && newPlayer.Hp > 0) {
+                    console.log("!!!A Boss has appeared!!!")
                     console.log("")    
                     console.log(`${bosslist[2].Name} is in your sight! What will it be?`)
                     console.log("")
@@ -337,8 +339,9 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
                         newPlayer.aggro -= 1
                     }
                 }}
-            else if (numGenTwo <= 95.315) {
+            else if (numGenTwo <= 95.315 && bosslist.length > 3) {
                 while (newPlayer.aggro > 0 && newPlayer.Hp > 0) {
+                    console.log("!!!A Boss has appeared!!!")
                     console.log("")    
                     console.log(`${bosslist[3].Name} is in your sight! What will it be?`)
                     console.log("")
@@ -399,8 +402,9 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
                         newPlayer.aggro -= 1
                     }
                 }}
-            else if (numGenTwo <= 98.435) {
+            else if (numGenTwo <= 98.435 && bosslist.length > 4) {
                 while (newPlayer.aggro > 0 && newPlayer.Hp > 0) {
+                    console.log("!!!A Boss has appeared!!!")
                     console.log("")    
                     console.log(`${bosslist[4].Name} is in your sight! What will it be?`)
                     console.log("")
@@ -461,8 +465,9 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
                         newPlayer.aggro -= 1
                     }
                 }}
-            else if (numGenTwo <= 100) {
+            else if (numGenTwo <= 100 && bosslist.length > 5) {
                 while (newPlayer.aggro > 0 && newPlayer.Hp > 0) {
+                    console.log("!!!A Boss has appeared!!!")
                     console.log("")    
                     console.log(`${bosslist[5].Name} is in your sight! What will it be?`)
                     console.log("")
@@ -550,17 +555,16 @@ while (newPlayer.Hp > 0 && distance.MilesTraveled < 100) {
         console.log("_____________________________>")
         console.log("")
     }
-    if (bosslist === []) {
-        console.log("winner winner")
+    if (bosslist.length === 0) {
+        distance.MilesTraveled += 100
     }
 }
-if (newPlayer.Hp < 0) {
+if (newPlayer.Hp <= 0) {
     console.log("You've died. Game Over.")
     console.log("")
 }
 else {
     console.log("WINNER WINNER CHICKEN DINNER")
-    console.log("You've reached Roundtable Hold!")
     console.log("GG. Good game!")
     console.log("")
 }
