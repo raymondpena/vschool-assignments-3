@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Form</title>
+</head>
+<body>
+    <div>
+        <form id="container">
+            <div>
+                First Name: <input type="text" name="firstName"> 
+            </div>
+
+            <div>
+                Last Name: <input type="text" name="lastName">
+            </div>
+
+            <div>
+                Age: <input type="number" name="age">
+            </div>
+
+            <div>
+                Male: <input type="checkbox" value="Male" name="genders">
+                Female: <input type="checkbox" value="Female" name="genders">
+            </div>
+
+            <select id="locations">
+                <option value="empty"></option>
+                <option value="miami" name="miami">Miami</option>
+                <option value="newYork" name="newYork">New York</option>
+                <option value="chicago" name="chicago">Chicago</option>
+            </select>
+
+            <div id="diet">
+                Vegetarian: <input type="checkbox" name="vegetarian" value="vegetarian">
+                Kosher: <input type="checkbox" name="kosher" value="kosher">
+                Lactose Free: <input type="checkbox" value="lactose" name="lactose" >
+                <button>Submit</button> 
+            </div>
+        </form>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
