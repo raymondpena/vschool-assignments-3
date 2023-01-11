@@ -34,9 +34,3 @@ button.addEventListener("click", (event) => {
     event.preventDefault()
     addMulti()
 })
-
-
-
-
-
-

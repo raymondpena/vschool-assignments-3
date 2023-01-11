@@ -1,0 +1,16 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+body > div {
+    border: solid black 2px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+body > div > button {
+    font-size: 50px;
+}
