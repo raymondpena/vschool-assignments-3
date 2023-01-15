@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body > #span {
+    border: solid white 2px;
+    margin-top: 450px;
+    width: 150px;
+    height: 150px;
+    transition: background-color 1s linear;
+}
+#span:hover {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+}
